@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --font-heading: "Poppins", sans-serif;
+    --color-primary: rgb(251, 199, 4);
+    --color-primary-2: rgb(175, 160, 35);
+    --color-secondary: rgb(0, 76, 72);
+    --color-primary-text: #000000;
+    --color-secondary-text: #fff;
+}
+
+
+
+body {
+  background: linear-gradient(to right bottom, #0d0d0e, #171818);
+}
+.container {
+    max-width: 1280px;
+}
+
+
+
+.Hero_Content h1 {
+    font-size: 48px;
+    color: var(--color-secondary-text);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    line-height: 1.3em;
+}
+
+.Hero_Content h3 {
+    font-size: 20px;
+    color: var(--color-secondary-text);
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+p {
+    font-size: 16px;
+    color: var(--color-secondary-text);
+    font-weight: 300;
+    font-family: var(--font-heading);
+}
+.social_icons svg {
+    filter: invert();
+    box-shadow: 0px 0 100px 0 #fff;
+}
+
+.Social_columns h4 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--color-secondary-text);
+}
+
+.social_icons a {
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 19px #222222b8, 0px 0px 19px #000000ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    transition: .4s linear;
+    width: 60px;
+}
+.social_icons a:hover {
+    transform: translateY(-5px);
+    background: #100f0f;
+}
+.Name_clr {
+    color: var(--color-primary);
+}
+
+
+.Skills_Section h2{
+  font-size: 45px;
+  color: var(--color-secondary-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+.Skills_Section h5 {
+  font-size: 14px;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.Box {
+  transition: .4s linear;
+  background: linear-gradient(to right bottom, #0d0d0e, #171818);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 10px 10px 19px #0a090999, -10px -10px 19px #0a0a0a;
+  cursor: pointer;
+  position: relative;
+  min-height: 250px;
+}
+
+.Box::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  border-left: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary);
+  transition: .5s;
+}
+.Box::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border-right: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  transition: .5s;
+}
+.Box:hover::after,
+.Box:hover::before {
+  width: 90%;
+  height: 88%;
+}
+
+
+.Box svg {
+  color: var(--color-primary);
+  width: 40px;
+  height: 40px;
+}
+
+.Box h3{
+  color: var(--color-secondary-text);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+  padding: 15px 0px;
+}
+
+.Box:hover svg {
+  animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+      transform: rotateZ(0);
+  }
+
+  15% {
+      transform: rotateZ(-20deg);
+  }
+
+  20% {
+      transform: rotateZ(10deg);
+  }
+
+  25% {
+      transform: rotateZ(-15deg);
+  }
+
+  30% {
+      transform: rotateZ(6deg);
+  }
+
+  35% {
+      transform: rotateZ(-9deg);
+  }
+
+  40%, 100% {
+      transform: rotateZ(0);
+  }
+}
+
+
+/*==============Animated Heading====================*/
+
+.text-container {
+    position: relative;
+    height: 75px;  /* Adjust height as needed */
+  }
+  
+  .text_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    animation: textFade 8s infinite;
+    font-size: 48px;
+    color: var(--color-secondary-text);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    line-height: 1.3em;
+  }
+  
+  .text_item:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .text_item:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .text_item:nth-child(3) {
+    animation-delay: 4s;
+  }
+
+  .text_item:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  
+  @keyframes textFade {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0;
+      }
+  }
+  
+
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+
+.Rotate_sec {
+  height: 400px;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin: auto;
+  transform: rotate3d(19, -29, 0, 283deg);
+}
+
+.Rotate_sec img{
+  width: 50px;
+  position: absolute;;
+}
+
+.Rotate_sec img:nth-child(1) {
+    left: 10px;
+    top: 55px;
+}
+
+.Rotate_sec img:nth-child(2) {
+    left: 0%;
+    right: 0%;
+    top: -20px;
+    bottom: 0%;
+    margin: auto;
+    margin-top: 0;
+}
+.Rotate_sec img:nth-child(3) {
+  right: 10px;
+  top: 60px;
+}
+.Rotate_sec img:nth-child(4) {
+  left: -25px;
+  top: 0%;
+  bottom: -30px;
+  margin: auto;
+}
+.Rotate_sec img:nth-child(5) {
+  left: 0%;
+  right: 0%;
+  bottom: -23px;
+  margin: auto;
+}
+.Rotate_sec img:nth-child(6) {
+  right: -25px;
+  top: 0%;
+  bottom: -30px;
+  margin: auto;
+}
+.Rotate_sec img:nth-child(7) {
+  right: 23px;
+  bottom: 43px;
+  margin: auto;
+}
+.Rotate_sec img:nth-child(8) {
+  left: 22px;
+  bottom: 45px;
+  margin: auto;
+}
+.second_rotate {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transform: rotate3d(0, 0, 0, 45deg);
+  height: 350px;
+  width: 350px;
+}
+
+
+.second_rotate {
+		animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(0deg);
+  }
+  50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.First_rotate {
+  animation: rotate-animation-2 10s infinite linear;
+}
+
+@keyframes rotate-animation-2 {
+0% {
+  transform: rotate(0deg);
+}
+50% {
+  transform: rotate(-180deg);
+}
+100% {
+  transform: rotate(-360deg);
+}
+}
+
+
+
+.port_box {
+  position: absolute;
+  bottom: -250px;
+}
+.port_image:hover .port_box {
+  bottom: 0;
+}
+
+.port_image {
+  background-image: url(../../public/Images/Afropop.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  border: 1px solid white;
+  align-items: end;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+
+/*========================Media Quries=============*/
+
+
+@media only screen and (max-width: 1024px) {
+
+    .text_item,
+    .Hero_Content h1 {
+        font-size: 34px;
+    }
+    .text-container {
+        height: 55px;
+    }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .text_item,
+    .Hero_Content h1 {
+        font-size: 26px;
+    }
+    .Hero_box {
+        flex-direction: column-reverse;
+    }
+
+}
+
+
